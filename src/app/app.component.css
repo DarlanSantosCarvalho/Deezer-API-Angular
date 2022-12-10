@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img.deezer-nav {
+  width: 80px;
+  height: 80px;
+}
+
+img {
+  width: 70px;
+  height: 40px;
+}
+
+nav {
+  background-color: #5f4bb6;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.deezer-main {
+  width: 120px;
+  height: 120px;
+}
+
+.slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Play", sans-serif;
+  color: #5f4bb6;
+  margin: 15px;
+  background-color: #F4E9CD;
+}
+
+.container-musicas {
+  background-color: black;
+  width: 40%;
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.musicas {
+  color: white;
+  width: 100%;
+  height: 40px;
+  background-color: #34247a;
+  display: flex;
+  align-items: center;
+  font-family: "Play", sans-serif;
+}
