@@ -11,6 +11,11 @@
 <body>
     <nav>
         <img class="deezer-nav" src="{{imagePath}}" alt="Logo da deezer">
+
+        <div class="search">
+            <label for="musica"><img class="submit" src="{{imagePathSearchButton}}" alt=""></label>
+            <input type="text" class="musica-search" placeholder="Qual a música que te move?" required>
+        </div>
     </nav>
 
     <main>
@@ -43,5 +48,5 @@
     </main>
 
 </body>
-
+<script src="/src/app/queryDeezer.js"></script>
 </html>

@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 img.deezer-nav {
   width: 80px;
@@ -20,6 +15,25 @@ nav {
   background-color: #5f4bb6;
 }
 
+.submit{
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin-right: 500px;
+}
+
+.musica-search{
+  padding: 10px 100px;
+  border-radius: 20px;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -30,6 +44,11 @@ nav {
   height: 120px;
 }
 
+main{
+  background-color: #5f4bb6;
+  height: 617px;
+}
+
 .slogan {
   display: flex;
   justify-content: center;
@@ -37,12 +56,14 @@ nav {
   flex-direction: column;
   font-family: "Play", sans-serif;
   color: #5f4bb6;
-  margin: 15px;
+  padding: 15px 0px;
+  margin-bottom: 15px;
   background-color: #F4E9CD;
 }
 
 .container-musicas {
   background-color: black;
+  margin-left: 420px;
   width: 40%;
   height: 350px;
   display: flex;
@@ -54,7 +75,7 @@ nav {
   color: white;
   width: 100%;
   height: 40px;
-  background-color: #34247a;
+  background-color: #34247A;
   display: flex;
   align-items: center;
   font-family: "Play", sans-serif;
