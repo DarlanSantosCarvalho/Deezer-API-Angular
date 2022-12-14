@@ -13,11 +13,8 @@
         <img class="deezer-nav" src="assets/images/deezer-logo-2021.svg" alt="Logo da deezer">
 
         <div class="search">
-            <label for="musica"><img id="submit" class="submit" src="assets/images/magnifier.png" alt=""></label>
-            <input (keyup.enter)="onSave(campo.value)"
-            #campo
-            type="text"  id="musica-search" class="musica-search" placeholder="Qual música te move?">
-            <p>{{conteudoSalvo}}</p>
+            <label (click)="getMethodSearch()" for="musica"><img id="submit" class="submit" src="assets/images/magnifier.png" alt=""></label>
+            <input (keyup.enter)="getMethodSearch()" type="text" [(ngModel)]="musicName" id="musica-search" class="musica-search" placeholder="Qual música te move?">
         </div>
     </nav>
 

@@ -8,22 +8,20 @@ import { HttpClient } from "@angular/common/http";
 })
 export class AppComponent implements OnInit {
 
-  conteudoSalvo: string = '';
+  musicName:string = "";
   tracks: any = [];
   cover: any = [];
   constructor(private http: HttpClient){
 
   }
 
-  onSave(valor:string){
-    this.conteudoSalvo = valor;
-    console.log(valor)
-  }
-
   ngOnInit(): void {
       this.getMethodPlaylists();
-      this.getMethodSearch();
 
+  }
+
+  changeMusicName(eventData:Event){
+    this.musicName = (<HTMLInputElement>eventData.target).value;
   }
 
   public getMethodPlaylists(){
@@ -39,11 +37,11 @@ export class AppComponent implements OnInit {
     });
   }
 
-  public async getMethodSearch(){
+  public getMethodSearch(){
     const options = {
       method: 'GET',
       url: 'https://deezerdevs-deezer.p.rapidapi.com/search',
-      params: {q: 'Eminem' ,"limit": 1}, // Usar event binding no parametro da função e usar o mesmo parametro na querie
+      params: {q: this.musicName ,"limit": 1}, // Usar event binding no parametro da função e usar o mesmo parametro na querie
       headers: {
         'X-RapidAPI-Key': '00409c6540msh20ba7d743bf8d70p10020djsnb1ca8717e8c6',
         'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
