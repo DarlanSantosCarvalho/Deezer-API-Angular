@@ -10,42 +10,51 @@
 
 <body>
     <nav>
-        <img class="deezer-nav" src="{{imagePath}}" alt="Logo da deezer">
+        <img class="deezer-nav" src="assets/images/deezer-logo-2021.svg" alt="Logo da deezer">
 
         <div class="search">
-            <label for="musica"><img class="submit" src="{{imagePathSearchButton}}" alt=""></label>
-            <input type="text" class="musica-search" placeholder="Qual a música que te move?" required>
+            <label for="musica"><img id="submit" class="submit" src="assets/images/magnifier.png" alt=""></label>
+            <input (keyup.enter)="onSave(campo.value)"
+            #campo
+            type="text"  id="musica-search" class="musica-search" placeholder="Qual música te move?">
+            <p>{{conteudoSalvo}}</p>
         </div>
     </nav>
 
     <main>
         <div class="slogan">
-            <img class="deezer-main" src="{{imagePath}}" alt="Logo da deezer">
+            <img class="deezer-main" src="assets/images/deezer-logo-2021.svg" alt="Logo da deezer">
             <h1>O poder da música</h1>
         </div>
 
         <div class="container-musicas">
-            <div class="musicas"> <img src="{{imagePath}}" alt="">
-                <h2>Bijuteria</h2>
+            <div class="musicas musica1"> <img [src]="tracks[0]?.album.cover" alt="">
+                <h2>{{ tracks[0]?.title }}</h2>
+                <p>{{tracks[0]?.artist.name}}</p>
             </div>
 
-            <div class="musicas"> <img src="{{imagePath}}" alt="">
-                <h2>When i was your man</h2>
+            <div class="musicas musica2"> <img [src]="tracks[1]?.album.cover" alt="">
+                <h2>{{tracks[1]?.title}}</h2>
+                <p>{{tracks[1]?.artist.name}}</p>
             </div>
 
-            <div class="musicas"> <img src="{{imagePath}}" alt="">
-                <h2>Um novo amor</h2>
+            <div class="musicas musica3"> <img [src]="tracks[2]?.album.cover" alt="">
+                <h2>{{tracks[2]?.title}}</h2>
+                <p>{{tracks[2]?.artist.name}}</p>
             </div>
 
-            <div class="musicas"> <img src="{{imagePath}}" alt="">
-                <h2>As it was</h2>
+            <div class="musicas musica4"> <img [src]="tracks[3]?.album.cover" alt="">
+                <h2>{{tracks[3]?.title}}</h2>
+                <p>{{tracks[3]?.artist.name}}</p>
             </div>
 
-            <div class="musicas"> <img src="{{imagePath}}" alt="">
-                <h2>Hello</h2>
+            <div class="musicas musica5"> <img [src]="tracks[4]?.album.cover" alt="">
+                <h2>{{tracks[4]?.title}}</h2>
+                <p>{{tracks[4]?.artist.name}}</p>
             </div>
         </div>
     </main>
 
 </body>
+
 </html>
