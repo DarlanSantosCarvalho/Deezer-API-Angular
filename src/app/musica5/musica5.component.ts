@@ -3,14 +3,13 @@ import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './musica5.component.html',
+  styleUrls: ['./musica5.component.css']
 })
-export class AppComponent implements OnInit {
+export class Musica5Component implements OnInit {
 
   objectMusic: any = [];
-  musicName:string = '';
-  search: any = [];
+  musicName:string = "";
   tracks: any = [];
   cover: any = [];
   constructor(private http: HttpClient){
@@ -41,7 +40,7 @@ export class AppComponent implements OnInit {
       console.log(this.objectMusic.data[0])
   })
   }
-
+  
   public getMethodPlaylists(){
     const options = {
       method: 'GET',
@@ -50,7 +49,7 @@ export class AppComponent implements OnInit {
         'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
       }
     };
-    this.http.get('https://deezerdevs-deezer.p.rapidapi.com/playlist/3155776842?limit=4', options).subscribe((data:any) =>{
+    this.http.get('https://deezerdevs-deezer.p.rapidapi.com/playlist/3155776842?limit=5', options).subscribe((data:any) =>{
       this.tracks = data.tracks.data;
       this.tracks[4] = this.objectMusic.data[0]
       console.log(this.tracks[4])
@@ -58,6 +57,5 @@ export class AppComponent implements OnInit {
     });
   }
 
+
   }
-
-

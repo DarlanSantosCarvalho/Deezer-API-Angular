@@ -3,6 +3,12 @@
 img.deezer-nav {
   width: 80px;
   height: 80px;
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color: white;
 }
 
 img {
@@ -47,6 +53,7 @@ nav {
 main {
   background-color: #5f4bb6;
   height: 617px;
+  position: relative;
 }
 
 .slogan {
@@ -63,12 +70,22 @@ main {
 
 .container-musicas {
   background-color: black;
-  margin-left: 500px;
+  margin-left: 490px;
   width: 30%;
   height: 400px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+}
+
+.router{
+  background-color: #5f4bb6;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 220px;
+  left: 950px;
 }
 
 .musicas {
